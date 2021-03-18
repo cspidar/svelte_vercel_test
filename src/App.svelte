@@ -1,12 +1,23 @@
 <script>
   import { onMount } from "svelte";
   export let date;
+  export let html;
 
   onMount(async () => {
     const res = await fetch("/api/date");
     const newDate = await res.text();
     date = newDate;
   });
+
+  onMount(async () => {
+    const res = await fetch("/api/ascii_test");
+    const newHtml = await res.text();
+    html = newHtml;
+  });
+
+
+  
+
 </script>
 
 <main>
@@ -31,6 +42,9 @@
     <code>/public</code>
     for static assets,
     <code>/src</code>
+
+
+    
     for components and content, and
     <code>/api</code>
     which contains a serverless
@@ -45,4 +59,8 @@
   <br />
   <h2>The date according to Node.js is:</h2>
   <p>{date ? date : 'Loading date...'}</p>
+
+  <p>{@html html}</p>
+
+
 </main>
