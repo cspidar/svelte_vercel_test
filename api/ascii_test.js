@@ -12,7 +12,6 @@ module.exports = (req, res) => {
 include::address1.csv[]
 |===
 
-[options="header, autowidth",format=csv,frame=topbot]
 [cols="~, ~", options="header, autowidth",frame=topbot]
 |===
 |표시 |설명
