@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "asciidoctor": "^2.2.1",
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "svelte-ui-button": "^0.0.10",
+    "svelte-ui-theme": "^0.0.13"
   }
 }
