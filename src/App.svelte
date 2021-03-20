@@ -10,14 +10,10 @@
   });
 
   onMount(async () => {
-    const res = await fetch("/api/ascii_test");
+    const res = await fetch("api/ascii_test");
     const newHtml = await res.text();
     html = newHtml;
   });
-
-
-  
-
 </script>
 
 <main>
@@ -33,7 +29,8 @@
     <a
       href="https://github.com/vercel/vercel/tree/master/examples/svelte"
       target="_blank"
-      rel="noreferrer noopener">
+      rel="noreferrer noopener"
+    >
       This project
     </a>
     is a
@@ -43,8 +40,6 @@
     for static assets,
     <code>/src</code>
 
-
-    
     for components and content, and
     <code>/api</code>
     which contains a serverless
@@ -58,9 +53,7 @@
   </p>
   <br />
   <h2>The date according to Node.js is:</h2>
-  <p>{date ? date : 'Loading date...'}</p>
+  <p>{date ? date : "Loading date..."}</p>
 
   <p>{@html html}</p>
-
-
 </main>
